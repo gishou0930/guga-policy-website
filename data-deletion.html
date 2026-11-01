@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f3ed">
+    <meta name="description" content="咕嘎 AI Threads 本機資料與 Threads 授權的刪除方式。">
+    <title>資料刪除說明｜咕嘎 AI Threads</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="咕嘎 AI Threads 隱私政策首頁">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span class="brand-name">咕嘎 <small>AI THREADS</small></span>
+      </a>
+      <nav class="top-links" aria-label="主要導覽">
+        <a class="top-link" href="./index.html">隱私政策</a>
+        <a class="top-link active" href="./data-deletion.html" aria-current="page">資料刪除</a>
+      </nav>
+    </header>
+
+    <main class="page-wrap deletion-page">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR DATA · YOUR DEVICE</p>
+        <div class="hero-row">
+          <div>
+            <h1 id="page-title">資料刪除說明</h1>
+            <p class="hero-en">Data Deletion Instructions</p>
+          </div>
+          <a class="back-link" href="./index.html">← 閱讀隱私政策</a>
+        </div>
+        <p class="hero-copy">咕嘎 AI Threads 在你的電腦本機保存應用程式資料。你可以依照以下步驟移除 Token、草稿及本機紀錄。</p>
+        <p class="hero-copy en">Guga AI Threads stores app data locally on your computer. Follow these steps to remove your token, drafts, and local records.</p>
+      </section>
+
+      <div class="deletion-grid">
+        <section class="deletion-card">
+          <span class="step-number">01</span>
+          <div>
+            <p class="section-index">DRAFTS</p>
+            <h2>刪除單篇草稿</h2>
+            <p>在咕嘎面板開啟「貼文草稿本」，對可刪除的草稿按「刪除草稿」。</p>
+            <p class="en">Open “Post Drafts” in the app and select “Delete draft” for a deletable draft.</p>
+          </div>
+        </section>
+
+        <section class="deletion-card">
+          <span class="step-number">02</span>
+          <div>
+            <p class="section-index">LOCAL CREDENTIAL</p>
+            <h2>移除本機 Threads Token</h2>
+            <p>開啟「Threads 憑證設定」，按「移除連線」。這會移除本機 Windows Credential Manager 中保存的 Token 與 App Secret；它不會自動刪除 Threads 上的貼文，也不一定會撤銷 Meta 端授權。</p>
+            <p class="en">Open “Threads Credential Settings” and choose “Remove connection.” This removes the token and app secret saved in Windows Credential Manager. It does not delete Threads posts or necessarily revoke authorization at Meta.</p>
+          </div>
+        </section>
+
+        <section class="deletion-card">
+          <span class="step-number">03</span>
+          <div>
+            <p class="section-index">LOCAL DATABASE</p>
+            <h2>刪除全部本機紀錄</h2>
+            <p>先關閉咕嘎 AI Threads，再刪除資料庫檔案。預設位置是專案資料夾中的 <code>data/guga_threads.sqlite3</code>；若你在 `.env` 設定了 <code>GUGA_DATABASE_PATH</code>，請刪除該設定指定的檔案。這會移除草稿、人設、已讀取的留言／貼文及回覆紀錄。</p>
+            <p class="en">Close Guga AI Threads, then delete the database file. The default location is <code>data/guga_threads.sqlite3</code> inside the project folder. If <code>GUGA_DATABASE_PATH</code> is set in <code>.env</code>, delete the file at that configured location. This removes drafts, persona settings, retrieved comments or posts, and reply records.</p>
+          </div>
+        </section>
+
+        <section class="deletion-card">
+          <span class="step-number">04</span>
+          <div>
+            <p class="section-index">DIAGNOSTICS & META</p>
+            <h2>清除診斷記錄與撤銷 Meta 授權</h2>
+            <p>如要一併清除本機啟動／錯誤記錄，關閉程式後刪除專案中的 <code>logs/startup.log</code> 或整個 <code>logs/</code> 資料夾。若曾使用較早版本，請先在 Meta 撤銷舊 Token，再刪除舊記錄。要撤銷 Meta 授權，請到 Threads／Meta 帳號的應用程式與網站授權設定移除此 App。</p>
+            <p class="en">To clear local startup or error diagnostics, close the app and delete <code>logs/startup.log</code> or the whole <code>logs/</code> folder. If you used an older version, revoke any old token in Meta before deleting the old log. To revoke Meta authorization, remove this app from the connected apps or websites settings for your Threads or Meta account.</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="remote-note">
+        <span class="recipient-label">PUBLISHED ON THREADS</span>
+        <h2>已發布內容</h2>
+        <p>在 Threads 發布的貼文或回覆由 Meta 保存與管理。若要刪除已發布內容，請直接在 Threads 刪除；刪除本機資料庫不會刪除 Meta 端的內容。</p>
+        <p class="en">Posts and replies published on Threads are stored and managed by Meta. Delete published content directly on Threads. Removing the local database does not delete content from Meta.</p>
+      </section>
+
+      <section class="contact-card deletion-contact">
+        <span class="contact-label">隱私權聯絡信箱 / PRIVACY CONTACT</span>
+        <p class="contact-email">【上線前請填入聯絡 Email】</p>
+        <p>目前尚未提供聯絡信箱。發布前請在本頁及 <a href="./index.html">隱私權政策</a> 填入可用地址。</p>
+        <p class="en">No contact email has been provided yet. Add a working address here and on the <a href="./index.html">Privacy Policy</a> before publishing.</p>
+      </section>
+
+      <footer class="document-footer">
+        <span>GUGA AI THREADS</span>
+        <a href="./index.html">隱私權政策 ↗</a>
+        <span>最後更新 · 2026.11.01</span>
+      </footer>
+    </main>
+  </body>
+</html>
